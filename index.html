@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercícios de Engenharia de Prompts no ChatGPT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h2 {
+      color: #2a5078;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .exercicio {
+      background-color: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+
+    .objetivo {
+      font-weight: bold;
+    }
+
+    .prompt {
+      background-color: #e7e7e7;
+      padding: 10px;
+      border-left: 3px solid #2a5078;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    .prompt:hover {
+      background-color: #dcdcdc;
+    }
+
+    .navegacao {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Exercícios de Engenharia de Prompts no ChatGPT</h1>
+  <p>Estes exercícios foram desenhados para explorar diferentes formas de formatar as respostas do ChatGPT, adequando-se
+    a várias necessidades e contextos profissionais.</p>
+
+      <div class="exercicio">
+        <h2>Exercício 1: Lista Hierarquicamente 📈</h2>
+        <p class="objetivo">Objetivo: Criar uma lista hierarquizada de etapas para implementar uma nova política de RH numa
+          organização.</p>
+        <div class="prompt">📋 Prompt: "<span class="prompt-text">Apresenta uma lista hierarquizada das etapas necessárias para implementar uma nova
+          política de recursos humanos focada no trabalho remoto, utilizando emoticons para destacar cada etapa.</span>"</div>
+      </div>
+
+      <div class="exercicio">
+        <h2>Exercício 2: Cria uma Tabela 📊</h2>
+        <p class="objetivo">Objetivo: Elaborar uma tabela comparativa entre dois métodos de avaliação de desempenho utilizados
+          em RH.</p>
+        <div class="prompt">📋 Prompt: "<span class="prompt-text">Cria uma tabela comparando a avaliação 360 graus com a avaliação por objetivos, incluindo
+          critérios como eficácia, tempo necessário para implementação, e satisfação dos empregados. Adiciona um emoticon a
+          cada critério.</span>"</div>
+      </div>
+
+      <div class="exercicio">
+        <h2>Exercício 3: Faz um Slide para Cada Um Destes Itens 🖥</h2>
+        <p class="objetivo">Objetivo: Desenvolver slides em Markdown para apresentar três técnicas de gestão de projetos I&D.
+        </p>
+        <p>Para saber mais sobre Markdown, clique aqui: <a href="./markdown.html" class="info-link"
+            target="_blank">Markdown</a>.</p>
+        <div class="prompt">📋 Prompt: "<span class="prompt-text">Escreve slides em markdown para apresentar as técnicas de gestão de projetos Scrum,
+          Kanban e Lean, incluindo um emoticon representativo para cada técnica.</span>"</div>
+      </div>
+
+      <div class="exercicio">
+        <h2>Exercício 4: Apresenta os Slides em Markdown 📝</h2>
+        <p class="objetivo">Objetivo: Transformar informações sobre estratégias de melhoria da qualidade operacional em slides
+          formatados em Markdown.</p>
+        <div class="prompt">📋 Prompt: "<span class="prompt-text">Gera slides em markdown detalhando três estratégias de melhoria da qualidade operacional,
+          com foco em economia e gestão. Cada slide deve incluir um título, uma descrição breve, e um emoticon relevante.</span>"
+        </div>
+      </div>
+
+      <div class="exercicio">
+        <h2>Exercício Adicional: Geração de LaTeX, HTML e Wikitext 🛠</h2>
+        <p>Para uma introdução sobre LaTeX e como usá-lo, clique aqui <a
+            href="./latex.html" class="info-link"
+            target="_blank">Introdução ao LaTeX no Overleaf</a>.</p>
+        <p class="objetivo">Objetivo: Converter o conteúdo dos três primeiros slides de Markdown para LaTeX (formato beamer),
+          HTML, e Wikitext.</p>
+        <div class="prompt">📋 Prompt para LaTeX (formato Beamer): "<span class="prompt-text">Transforma os slides em markdown sobre as técnicas de gestão
+          de projetos (Scrum, Kanban, Lean) em LaTeX utilizando o formato beamer.</span>"</div>
+        <div class="prompt">📋 Prompt para HTML: "<span class="prompt-text">Converte os slides em markdown sobre as técnicas de gestão de projetos em
+          HTML.</span>"</div>
+        <div class="prompt">📋 Prompt para Wikitext: "<span class="prompt-text">Converte os slides em markdown sobre as técnicas de gestão de projetos em
+          Wikitext.</span>"</div>
+      </div>
+
+  <!-- <div class="navegacao">
+    <button onclick="window.history.back();">Anterior</button>
+    <button onclick="window.history.forward();">Próximo</button>
+  </div> -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const prompts = document.querySelectorAll('.prompt');
+        prompts.forEach(function (prompt) {
+          prompt.addEventListener('click', function () {
+            // Seleciona apenas o texto dentro do elemento <span class="prompt-text">
+            const promptText = prompt.querySelector('.prompt-text').innerText;
+            navigator.clipboard.writeText(promptText).then(() => {
+              alert('Prompt copiado para a área de transferência!');
+            }).catch(err => {
+              console.error('Erro ao copiar o prompt:', err);
+            });
+          });
+        });
+      });
+    </script>
+</body>
+
+</html>
