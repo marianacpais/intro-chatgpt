@@ -12,12 +12,18 @@
       padding: 0;
     }
 
-    .header,
-    .footer {
+    .header {
       background-color: #004d40;
       color: white;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+    }
+
+    .header img.logo {
+      width: 100px;
+      /* Tamanho do logotipo */
+      margin-right: 20px;
     }
 
     .main-content {
@@ -31,6 +37,7 @@
     h1,
     h2 {
       color: #00695c;
+      margin: 0;
     }
   </style>
 </head>
@@ -38,8 +45,11 @@
 <body>
 
   <div class="header">
-    <h1>EcoInova</h1>
-    <p>Liderando com soluções sustentáveis</p>
+    <img src="logo.webp" alt="Logotipo da EcoInova" class="logo">
+    <div>
+      <h1>EcoInova</h1>
+      <p>Liderando com soluções sustentáveis</p>
+    </div>
   </div>
 
   <div class="main-content">
